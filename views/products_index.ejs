@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Type</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% Products.forEach(function(product){ %>
+            <tr>
+                <td><%= product.product_id %></td>
+                <td><%= product.product_name %></td>
+                <td><%= product.product_quantity %></td>
+                <td><%= product.product_type %></td>
+                <td><%= product.product_price %></td>
+            </tr>
+            <%= }); %>
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>
